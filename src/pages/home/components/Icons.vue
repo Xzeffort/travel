@@ -1,7 +1,7 @@
 <template>
     <div class="icons">
       <swiper >
-        <swiper-slide v-for="(page, index) in pages" :key="index">
+        <swiper-slide :options="swiperOption" v-for="(page, index) in pages" :key="index">
           <div class="icon" v-for="item in page" :key="item.id">
               <div class="icon-img">
                   <img class="icon-img-content" :src="item.imgUrl">
@@ -16,55 +16,14 @@
 <script>
 export default {
   name: 'HomeIcons',
+  props: {
+    iconList: Array
+  },
   data () {
     return {
-      iconList: [
-        {
-          id: '001',
-          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-          desc: '景点门票'
-        },
-        {
-          id: '002',
-          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1804/ed/cf572be30fc32f02.png',
-          desc: 'Q+精选'
-        },
-        {
-          id: '003',
-          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/17/99402a22ce4af302.png',
-          desc: '西湖'
-        },
-        {
-          id: '004',
-          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/75/eca3ce656c886502.png',
-          desc: '千岛湖'
-        },
-        {
-          id: '005',
-          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/b8/c5dcdb58deec2402.png',
-          desc: '西溪湿地'
-        },
-        {
-          id: '006',
-          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/17/99402a22ce4af302.png',
-          desc: '印象西湖'
-        },
-        {
-          id: '007',
-          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/e3/67df61427c8e1302.png',
-          desc: '宋城千古情'
-        },
-        {
-          id: '008',
-          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/75/eca3ce656c886502.png',
-          desc: '漂流'
-        },
-        {
-          id: '009',
-          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/8c/47630407f70e8302.png',
-          desc: '横店喜剧节'
-        }
-      ]
+      swiperOption: {
+        autoplay: false
+      }
     }
   },
   computed: {

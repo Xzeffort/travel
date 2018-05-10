@@ -17,29 +17,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      recommendList: [
-        {
-          id: '0001',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1412/be/c788f0f3767d2ea037b9b66d2010bfa4.water.jpg_200x200_ead93bcd.jpg',
-          title: '西溪国家湿地公园',
-          desc: '里面的动物太少了,里面的动物太少了'
-        },
-        {
-          id: '0002',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1412/be/c788f0f3767d2ea037b9b66d2010bfa4.water.jpg_200x200_ead93bcd.jpg',
-          title: '西溪国家湿地公园',
-          desc: '里面的动物太少了,里面的动物太少了'
-        },
-        {
-          id: '0003',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1412/be/c788f0f3767d2ea037b9b66d2010bfa4.water.jpg_200x200_ead93bcd.jpg',
-          title: '西溪国家湿地公园',
-          desc: '里面的动物太少了,里面的动物太少了'
-        }
-      ]
-    }
+  props: {
+    recommendList: Array
   }
 }
 </script>
