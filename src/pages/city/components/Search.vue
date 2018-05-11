@@ -13,7 +13,7 @@ export default {
 <style lang="stylus" scoped>
   @import "~styles/varibles.styl"
   .search
-    height .72rem
+    height .62rem
     padding .1rem
     background $bgColor
     .search-input
